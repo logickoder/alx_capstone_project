@@ -31,6 +31,13 @@ def contact():
         subject = request.form.get("subject")
         message = request.form.get("message")
 
+        if name == "" or email == "" or subject == "" or message == "":
+            return render_template(
+                "index.html", message="Please fill the required fields"
+            )
+        elif email.find("@") == -1:
+            return render_template("index.html", message="Please enter a valid email")
+
         mail.send_message(
             subject + " (" + name + ")",
             sender=email,
