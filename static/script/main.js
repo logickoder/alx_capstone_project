@@ -1,3 +1,6 @@
+import skills from './skills.json' assert { type: 'json' };
+import projects from './projects.json' assert { type: 'json' };
+
 // Sticky Menu Background
 window.addEventListener('scroll', function () {
     if (window.scrollY > 150) {
@@ -23,45 +26,86 @@ $('#main-nav a').on('click', function (event) {
     }
 });
 
-// setup form submission
+
+
+// load skills into page
+function loadSkills() {
+    const container = document.body.querySelector('#skills .items');
+    container.replaceChildren();
+
+    // load skills into the container
+    skills.forEach((skill) => {
+        const value = skill.value * 100;
+        const valueText = `${value}%`;
+
+        const title = document.createElement('h1');
+        title.textContent = skill.name;
+
+        const percent = document.createElement('p');
+        percent.textContent = valueText;
+
+        const subject = document.createElement('div');
+        subject.classList.add('subject');
+        subject.append(title, percent);
+
+        const progressSpan = document.createElement('span');
+        progressSpan.textContent = valueText;
+
+        const progress = document.createElement('div');
+        progress.classList.add('progress-bar', 'color-1');
+        progress.setAttribute('role', 'progressbar');
+        progress.setAttribute('aria-valuenow', valueText);
+        progress.setAttribute('aria-valuemin', '0');
+        progress.setAttribute('aria-valuemax', '100');
+        progress.style.width = `${value}%`;
+        progress.appendChild(progressSpan);
+
+        const item = document.createElement('div');
+        item.classList.add('item');
+        item.append(subject, progress);
+
+        container.appendChild(item);
+    });
+}
+
+
+// load projects into page
+function loadProjects() {
+    const container = document.body.querySelector('#projects .items');
+    container.replaceChildren();
+
+    // load projects into the container
+    projects.forEach((project) => {
+        const image = document.createElement('img');
+        image.src = project.image;
+
+        const title = document.createElement('h1');
+        title.textContent = project.name;
+        title.classList.add('m-heading');
+
+        const description = document.createElement('p');
+        description.textContent = project.description;
+        description.classList.add('desc');
+
+        const item = document.createElement('div');
+        item.classList.add('item', 'card');
+        item.append(image, title, description);
+
+        container.appendChild(item);
+    });
+}
+
+// load year into page
+function loadYear() {
+    const year = new Date().getFullYear();
+    const years = document.body.querySelectorAll('.year');
+    years.forEach((y) => {
+        y.textContent = year;
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        // getting the input values
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const messages = document.getElementById('messages').value.trim();
-        const message = document.getElementById('message');
-
-        // Validate form fields
-        if (name == '' || email == '' || subject == '' || messages == '') {
-            // Display error message if any required field is empty
-            message.textContent = 'Please fill in all required fields.';
-            message.style.color = 'red';
-        } else if (!isValidEmail(email)) {
-            // Display error message if the email format is invalid
-            message.textContent = 'Please enter a valid email address.';
-            message.style.color = 'red';
-        } else {
-            // Clear any previous error messages
-            message.textContent = '';
-
-            // Display success message
-            message.textContent = 'Form submitted successfully!';
-            message.style.color = 'green';
-
-            // Submit the form
-            document.getElementById('submitForm').submit();
-        }
-    }
-
-    // Function to validate email format
-    function isValidEmail(email) {
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        return emailPattern.test(email);
-    }
-
-    // Attach the validateForm function to the form submission event
-    document.getElementById('submitForm').addEventListener('submit', handleFormSubmit);
+    loadSkills();
+    loadProjects();
+    loadYear();
 });

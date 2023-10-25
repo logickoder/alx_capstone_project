@@ -9,14 +9,11 @@
     <meta name="keywords" content="developer, logickoder, jeffery">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static', filename='./favicon.ico')}}">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='./css/style.css')}}">
-    <link rel="stylesheet" media="screen and (max-width: 500px)"
-        href="{{url_for('static', filename='./css/mobile.css')}}">
-    <link rel="stylesheet" media="screen and (min-height: 900px)"
-        href="{{url_for('static', filename='./css/portrait.css')}}">
-    <link rel="stylesheet" media="screen and (max-height: 500px)"
-        href="{{url_for('static', filename='./css/landscape.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="../static/css/mobile.css">
+    <!-- <link rel="stylesheet" media="screen and (min-height: 900px)" href="../static/css/portrait.css">
+    <link rel="stylesheet" media="screen and (max-height: 500px)" href="../static/css/landscape.css"> -->
     <title>logickoder | Software Engineer</title>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
@@ -60,39 +57,34 @@
     <!-- Section: About Me -->
     <section id="about">
         <div class="container">
-            <div class="about-container">
-                <div class="about-image"></div>
-                <div class="about-content">
-                    <h1>About Me</h1>
-                    <article>
+            <h1 class="l-heading">About Me</h1>
+            <article>
 
-                        <p>
-                            <span class="m-heading">Hi</span>, I'm Jeffery Orazulike, also known as logickoder. I'm a
-                            mobile and backend developer with
-                            more than two years of
-                            experience in Kotlin and Dart programming languages.
-                        </p>
-                        <p>
-                            I love solving logical problems relating to
-                            code and creating
-                            beautiful and functional apps for Android and Flutter platforms.
-                        </p>
-                        <p>
-                            I'm currently working on some
-                            personal projects such as
-                            a QR code payment app, an expense manager app. I'm also trying to
-                            get into open source by
-                            contributing to projects like Notify and Widgetbook.
-                        </p>
-                        <p>
-                            You can find some of my work on <a href="https://github.com/logickoder">Github</a>
-                            and read some of my articles on <a href="https://medium.com/@logickoder">Medium</a>. I'm
-                            always
-                            eager to learn new things and collaborate with other developers.
-                        </p>
-                    </article>
-                </div>
-            </div>
+                <p>
+                    <span class="m-heading">Hi</span>, I'm Jeffery Orazulike, also known as logickoder. I'm a
+                    mobile and backend developer with
+                    more than two years of
+                    experience in Kotlin and Dart programming languages.
+                </p>
+                <p>
+                    I love solving logical problems relating to
+                    code and creating
+                    beautiful and functional apps for Android and Flutter platforms.
+                </p>
+                <p>
+                    I'm currently working on some
+                    personal projects such as
+                    a QR code payment app, an expense manager app. I'm also trying to
+                    get into open source by
+                    contributing to projects like Notify and Widgetbook.
+                </p>
+                <p>
+                    You can find some of my work on <a href="https://github.com/logickoder">Github</a>
+                    and read some of my articles on <a href="https://medium.com/@logickoder">Medium</a>. I'm
+                    always
+                    eager to learn new things and collaborate with other developers.
+                </p>
+            </article>
         </div>
     </section>
 
@@ -100,65 +92,19 @@
     <section id="skills">
         <div class="container">
             <div class="skill-container">
-                <h1 class="l-heading">MY SKILLS</h1>
-                <div class="items">
-                    <div class="item">
-                        <div class="subject">
-                            <h1>HTML5</h1>
-                            <p>90%</p>
-                        </div>
-                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                            aria-valuemax="100" style="width:90%"><span>90%</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="subject">
-                            <h1>CSS3</h1>
-                            <p>80%</p>
-                        </div>
-                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                            aria-valuemax="100" style="width:75%"><span>75%</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="subject">
-                            <h1>Java</h1>
-                            <p>80%</p>
-                        </div>
-                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-                            aria-valuemax="100" style="width:80%"><span>80%</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="subject">
-                            <h1>VB.NET</h1>
-                            <p>60%</p>
-                        </div>
-                        <div class="progress-bar color-2" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width:60%"><span>60%</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="subject">
-                            <h1>Android Development</h1>
-                            <p>60%</p>
-                        </div>
-                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width:60%"><span>60%</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="subject">
-                            <h1>C#</h1>
-                            <p>60%</p>
-                        </div>
-                        <div class="progress-bar color-1" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width:60%"><span>60%</span>
-                        </div>
-                    </div>
-                </div>
+                <h1 class="l-heading">My Skills</h1>
+                <div class="items"></div>
             </div>
         </div>
+    </section>
+
+    <!-- Section: Projects -->
+    <section id="projects">
+        <div class="container">
+            <div class="project-container">
+                <h1 class="l-heading">My Projects</h1>
+                <div class="items"></div>
+            </div>
         </div>
     </section>
 
@@ -168,24 +114,25 @@
             <div class="contact-form">
                 <h2 class="m-heading">Contact Me</h2>
                 <p>Please use the form below to contact me</p>
-                <form name="contact_form" method="POST" data-netlify="true">
+                <form id="contactForm" name="contactForm" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Enter Name">
+                        <input type="text" name="name" id="name" placeholder="Enter Name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Enter Email">
+                        <input type="text" name="email" id="email" placeholder="Enter Email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="Enter Subject" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Enter Message"></textarea>
+                        <textarea name="message" id="message" placeholder="Enter Message" required></textarea>
                     </div>
-                    <input type="submit" value="Send" class="btn btn-dark" onclick="validate()">
+                    <p id="form-error"></p>
+                    <input type="submit" value="Send" class="btn btn-dark">
                 </form>
             </div>
         </div>
@@ -203,7 +150,7 @@
                     <a href="http://linkedin.com/in/logickoder" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-            <p>Copyright &copy; 2023, logickoder, All Rights Reserved</p>
+            <p>Copyright &copy; <span class="year"></span>, logickoder, All Rights Reserved</p>
     </footer>
 
 
@@ -213,7 +160,9 @@
 
 
     <!-- Local JS File -->
-    <script src="{{url_for('static', filename='./script/main.js')}}"></script>
+    <script type="module" src="../static/script/main.js"></script>
+    <script src="../static/script/skills.json"></script>
+    <script src="../static/script/projects.json"></script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-import ssl
 from flask import Flask, render_template, request
 import os
 from flask_mail import Mail
@@ -8,16 +7,15 @@ load_dotenv()
 
 app = Flask(__name__)
 
-gmail_user = os.getenv("GMAIL_USER")
-gmail_password = os.getenv("GMAIL_PASSWORD")
+my_email = os.getenv("EMAIL")
 
 # configuring values
 app.config.update(
     MAIL_SERVER="smtp.gmail.com",
     MAIL_PORT="465",
     MAIL_USE_SSL=True,
-    MAIL_USERNAME=gmail_user,
-    MAIL_PASSWORD=gmail_password,
+    MAIL_USERNAME=my_email,
+    MAIL_PASSWORD=os.getenv("EMAIL_PASSWORD"),
 )
 
 # instance of mail
@@ -33,16 +31,11 @@ def contact():
         subject = request.form.get("subject")
         message = request.form.get("message")
 
-        # print("Name:", name)
-        # print("Email:", email)
-        # print("Subject:", subject)
-        # print("Message:", message)
-
         mail.send_message(
-            "Message from " + name + " at " + email,
+            subject + " (" + name + ")",
             sender=email,
-            recipients=[gmail_user],
-            body=subject + "\n\n" + message,
+            recipients=[my_email],
+            body=message,
         )
 
     return render_template("index.html")

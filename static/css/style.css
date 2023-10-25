@@ -105,7 +105,7 @@ li {
 
 /* Utility Classes */
 .l-heading {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .l-heading span {
@@ -119,15 +119,14 @@ li {
 .btn {
   color: var(--light-color);
   background-color: var(--primary-color);
-  padding: .2rem 1rem;
-  border-radius: 15px;
+  padding: .75rem;
+  border-radius: 5px;
 }
 
 .btn-primary {
   border: var(--primary-color) 2px solid;
   background-color: var(--light-color);
   color: var(--primary-color);
-  border-radius: 15px;
 }
 
 .btn:hover {
@@ -137,12 +136,30 @@ li {
 .container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 0 2rem;
+  padding: 2rem;
   overflow: hidden;
 }
 
 .go-down {
   border-radius: 50%;
+}
+
+.card {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card>*:not(img) {
+  margin: 1rem;
+}
+
+.card img {
+  margin: 0;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 /* Navbar */
@@ -190,16 +207,6 @@ li {
   position: relative;
 }
 
-#showcase:before {
-  content: '';
-  background: url('../img/Jeffrey.jpg') no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
-}
 
 #showcase .showcase-container {
   display: grid;
@@ -221,41 +228,12 @@ li {
 #about {
   color: #333;
   background: #dee1e6;
-}
-
-#about .about-container {
-  display: grid;
-  grid-template-columns: 3fr 5fr;
-  grid-gap: 1rem;
-}
-
-#about .about-image {
-  color: #fff;
-  background: #dee1e6;
-  padding: 2rem;
-  position: relative;
-}
-
-#about .about-image:before {
-  content: '';
-  background: url('../img/Jeffrey2.jpg') no-repeat center center/cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
-}
-
-#about h1 {
-  padding: 2rem;
-  font-size: 4rem;
-  color: #4bc898;
-}
-
-#about .about-content {
   line-height: 2.5rem;
   font-size: 1.3rem;
+}
+
+#about .l-heading {
+  margin-bottom: 1rem;
 }
 
 /* Section: Skills */
@@ -266,7 +244,6 @@ li {
 
 #skills .items {
   display: grid;
-  grid-gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
@@ -284,6 +261,29 @@ li {
   align-items: center;
 }
 
+/* Section: Skills */
+#projects {
+  color: #333;
+  background: #dee1e6;
+}
+
+#projects .l-heading {
+  margin-bottom: 1rem;
+}
+
+#projects .items {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#projects .items .item {
+  height: 100%;
+}
+
 /* Section: Contact Me */
 #contact {
   background: var(--secondary-color);
@@ -291,34 +291,30 @@ li {
 }
 
 #contact .contact-form {
-  max-width: 350px;
-  margin: auto;
+  max-width: 55%;
   padding: 2rem;
-  margin-top: 50px;
+  margin: 50px auto;
   background-color: var(--light-color);
-  line-height: 3rem;
   text-align: center;
-  font-size: 1.3rem;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
-#contact .contact-form .form-group {
+.form-group {
   text-align: left;
   margin-bottom: 1rem;
 }
 
-#contact .contact-form .form-group label,
-#contact .contact-form .form-group textarea,
-#contact .contact-form .form-group input {
+.form-group label,
+.form-group textarea,
+.form-group input {
   display: block;
   width: 100%;
 }
 
-#contact .contact-form .form-group input,
-#contact .contact-form .form-group textarea {
+.form-group input,
+.form-group textarea {
   border-radius: 5px;
-  padding: 4px;
+  padding: .7rem;
   border: 1px #f3f2f3 solid;
 }
 
@@ -336,14 +332,17 @@ li {
 }
 
 #footer .social-sites {
-  display: grid;
-  grid-template-columns: 5fr 1fr;
+  display: flex;
   justify-content: space-between;
-  grid-gap: 2rem;
+  align-items: center;
 }
 
-#footer .social-sites div a {
-  margin: auto;
+#footer .social-sites p {
+  flex: 1;
+}
+
+#footer .social-sites div {
+  flex-shrink: 0;
 }
 
 #footer .social-sites+p {
