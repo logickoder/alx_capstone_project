@@ -1,0 +1,89 @@
+.container {
+    max-width: 500px;
+}
+
+body {
+    font-size: 1rem;
+}
+
+#about h1 {
+    font-size: 2rem;
+}
+
+#main-nav .nav-container {
+    grid-template-columns: 1fr;
+}
+
+#main-nav .nav-container .btn{
+    background-color: transparent;
+    border-radius: none;
+    padding: 0; 
+}
+
+#main-nav {
+    background: #222;
+    opacity: 1;
+}
+
+#main-nav .nav-container .logo{
+    text-align: center;
+  }
+
+#main-nav #nav-links ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  /* Showcase */
+  #showcase {
+    height: 80vh;
+}
+
+  /* Skills */
+  #skills .items {
+      grid-template-columns: 1fr;
+  }
+
+  #skills .container * {
+    margin-bottom: 0.1rem;
+    margin-right: 1rem;
+    margin-top: .2rem;
+}
+
+#showcase .showcase-container {
+    grid-template-columns:  1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.l-heading {
+    font-size: 2.5rem;
+}
+
+.m-heading {
+    font-size: 2rem;
+}
+
+#contact .contact-form {
+    margin-top: 20vh;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+#footer .social-sites {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 0;
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: .70rem;
+    }
+
+    #contact .contact-form {
+        margin-top: 20px;
+    }
+    
+}

@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "technology": "HTML5",
+        "percent": 0.7
+    },
+    {
+        "id": "2",
+        "technology": "CSS3",
+        "percent": 0.5
+    },
+    {
+        "id": "3",
+        "technology": "JavaScript",
+        "percent": 0.8
+    },
+    {
+        "id": "4",
+        "technology": "Java",
+        "percent": 0.9
+    },
+    {
+        "id": "5",
+        "technology": "Kotlin",
+        "percent": 0.95
+    },
+    {
+        "id": "6",
+        "technology": "Android",
+        "percent": 0.9
+    },
+    {
+        "id": "7",
+        "technology": "Dart",
+        "percent": 0.9
+    },
+    {
+        "id": "8",
+        "technology": "Flutter",
+        "percent": 0.9
+    },
+    {
+        "id": "9",
+        "technology": "NodeJS",
+        "percent": 0.6
+    }
+]
