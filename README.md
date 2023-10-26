@@ -5,25 +5,36 @@ The main objectives are:
 
 - An overview about myself
 - My projects and a description of the functionality of the projects
-- The skills that I have learnt throughout the ALX journey
+- The skills that I have accrued throughout my time as a developer
 - Contact information
 
-## Features and Functionality
+## Features & Functionality
 
 - [About](#about)
 - [Projects](#projects)
 - [Skills](#skills)
-- [Getting Started](#getting_started)
-- [Installing](#installing)
-- [Usage](#usage)
-- [Contributing](#contributing)
+- [Contact](#contact)
 
-## Technologies used
+## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
+- Python
+- Flask
 - Git
+  
+## Project Screenshot
+<table>
+<tr>
+<td valign="top" width="50%">
+
+![Flow Chart](<./screenshots/portfolio-screenshot.jpeg>)</td>
+<td valign="top" width="50%">
+
+</td>
+</tr>
+</table>
 
 ## Project Workflow & flowchart
 
@@ -33,11 +44,31 @@ The project in development is a personal portfolio website, which has the main o
 - Include sections for an “about me”, skills, projects, and contact information.
 - Display your projects with brief descriptions, images, and links to live demos or source code repositories.
 
-![Alt text](<./screenshots/portfolio-flowchart.png>)
+<table>
+<tr>
+<td valign="top" width="50%">
+
+![Flow Chart](<./screenshots/portfolio-flowchart.png>)</td>
+<td valign="top" width="50%">
+
+</td>
+</tr>
+</table>
 
 ## Design of the prototype
 
-Here is a link to the [design](https://www.linkedin.com/in/logickoder) which shows the expected structure of the project
+Here is the low fidelity prototype of the portfolio website:
+<table>
+<tr>
+<td valign="top" width="50%">
+
+
+![Mockup](<./screenshots/portfolio-prototye.png>)</td>
+<td valign="top" width="50%">
+
+</td>
+</tr>
+</table>
 
 ## Roadmap and future enhancements
 
