@@ -11,21 +11,34 @@ window.addEventListener('scroll', function () {
 });
 
 // Smooth Scrolling
-$('#main-nav a').on('click', function (event) {
-    if (this.hash !== ' ') {
-        event.preventDefault();
+function setupSmoothScroll() {
+    function smoothScroll(target, offset = 0) {
+        // Get the target element.
+        const targetElement = document.querySelector(target);
 
-        const hash = this.hash;
+        // Get the current scroll position.
+        const currentScrollY = window.scrollY;
 
-        $('html, body').animate(
-            {
-                scrollTop: $(hash).offset().top - 100
-            },
-            800
-        );
+        // Calculate the distance to scroll.
+        const distanceToScroll = targetElement.getBoundingClientRect().top - offset;
+
+        // Scroll to the target element smoothly.
+        window.scrollTo({
+            top: currentScrollY + distanceToScroll,
+            behavior: 'smooth',
+        });
     }
-});
 
+    const navLinks = document.querySelectorAll('#main-nav a');
+    const offset = document.querySelector('#main-nav').offsetHeight;
+    navLinks.forEach((link) => {
+        const target = link.getAttribute('href');
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            smoothScroll(target, offset);
+        });
+    });
+}
 
 
 // load skills into page
@@ -108,4 +121,5 @@ document.addEventListener('DOMContentLoaded', function () {
     loadSkills();
     loadProjects();
     loadYear();
+    setupSmoothScroll();
 });

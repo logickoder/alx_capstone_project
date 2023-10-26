@@ -183,7 +183,7 @@ li {
 
 #main-nav #nav-links ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: space-between;
   grid-gap: 1rem;
@@ -196,6 +196,11 @@ li {
 
 #main-nav #nav-links ul .btn:hover {
   border-bottom: none;
+}
+
+#main-nav .btn {
+  border-radius: none;
+  padding: 2px;
 }
 
 /* Showcase */
