@@ -10,7 +10,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Smooth Scrolling
+// setup smooth scrolling for nav links
 function setupSmoothScroll() {
     function smoothScroll(target, offset = 0) {
         // Get the target element.
@@ -100,7 +100,9 @@ function loadProjects() {
         description.textContent = project.description;
         description.classList.add('desc');
 
-        const item = document.createElement('div');
+        const item = document.createElement('a');
+        item.setAttribute('href', project.url);
+        item.setAttribute('target', '_blank');
         item.classList.add('item', 'card');
         item.append(image, title, description);
 

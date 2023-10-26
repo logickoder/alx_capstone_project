@@ -4,34 +4,34 @@
         "name": "QrPay",
         "description": "QrPay is a payment system that allows you to pay for goods and services using a QR code.",
         "image": "https://github.com/logickoder/qrpay/blob/main/screenshots/screen-2.jpeg?raw=true",
-        "link": "https://github.com/logickoder/qrpay"
+        "url": "https://github.com/logickoder/qrpay"
     },
     {
         "id": "2",
         "name": "Expense Manager",
         "description": "Expense Manager is a simple app to manage your daily expenses.",
         "image": "https://github.com/logickoder/expense-manager/blob/main/screenshots/screenshot-1.png?raw=true",
-        "link": "https://github.com/logickoder/expense-manager"
+        "url": "https://github.com/logickoder/expense-manager"
     },
     {
         "id": "3",
         "name": "Hospital App",
         "description": "This project aims to develop a simple mobile application ui that serves as a platform to connect and link up hospitals.",
         "image": "https://github.com/logickoder/hospital-app-link-up-ui/blob/main/screenshots/screenshot-1.png?raw=true",
-        "link": "https://github.com/logickoder/hospital-app-link-up-ui"
+        "url": "https://github.com/logickoder/hospital-app-link-up-ui"
     },
     {
         "id": "4",
         "name": "Payment App",
         "description": "This project provides a sleek and modern interface for user authentication in payment apps.",
         "image": "https://github.com/logickoder/payment-app-auth-ui/blob/main/screenshots/screenshot-5.jpg?raw=true",
-        "link": "https://github.com/logickoder/payment-app-auth-ui"
+        "url": "https://github.com/logickoder/payment-app-auth-ui"
     },
     {
         "id": "5",
         "name": "Weather App",
         "description": "The Weather App is a simple flutter app that displays the weather of a city. It uses the OpenWeatherMap API to fetch the weather data.",
         "image": "https://github.com/logickoder/weather/raw/main/screenshots/screenshot.png?raw=true",
-        "link": "https://github.com/logickoder/weather"
+        "url": "https://github.com/logickoder/weather"
     }
 ]
